@@ -1,6 +1,18 @@
 (defpackage parenboost
   (:use #:cl #:parenscript)
-  (:export #:reduce
+  (:export #:length>
+           #:length<
+           #:length=
+           #:with-timeout
+           #:with-interval
+           #:undefinedp
+           #:definedp
+           #:nanp
+           #:finitep
+           #:make
+           #:throw-error
+           ;; ITER
+           #:reduce
            #:mapcar
            #:filter-map
            #:every
