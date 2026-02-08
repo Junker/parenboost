@@ -33,7 +33,8 @@
            #:str-concat
            #:strcat
            #:str-ends-with-p
-           #:str-includes
+           #:str-includes-p
+           #:str-contains-p
            #:str-index-of
            #:str-well-formed-p
            #:str-last-index-of

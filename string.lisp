@@ -17,8 +17,10 @@
 (defpsmacro str-ends-with-p (str search-str &optional end-pos)
   `(chain ,str (ends-with ,search-str ,@(when end-pos `(,end-pos)))))
 
-(defpsmacro str-includes (str search-str &optional pos)
+(defpsmacro str-includes-p (str search-str &optional pos)
   `(chain ,str (includes ,search-str ,@(when pos `(,pos)))))
+(defpsmacro str-contains-p (&rest args)  ; alias
+  `(str-includes-p ,@args))
 
 (defpsmacro str-index-of (str search-str &optional pos)
   `(chain ,str (index-of ,search-str ,@(when pos `(,pos)))))
