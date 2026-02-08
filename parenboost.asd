@@ -3,7 +3,7 @@
   :author "Dmitrii Kosenkov"
   :license "MIT"
   :depends-on ("parenscript")
-  :description "Useful parenscript macros"
+  :description "Handy Parenscript Macros"
   :homepage "https://github.com/Junker/parenboost"
   :source-control (:git "https://github.com/Junker/parenboost.git")
   :components ((:file "package")
