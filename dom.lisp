@@ -23,3 +23,12 @@
 
 (defpsmacro inner-html (elem)
   `(chain ,elem inner-h-t-m-l))
+
+(defpsmacro add-event-listener (elem type listener &rest args)
+  `(chain ,elem (add-event-listener ,type ,listener ,@args)))
+
+(defpsmacro remove-event-listener (elem type listener &rest args)
+  `(chain ,elem (remove-event-listener ,type ,listener ,@args)))
+
+(defpsmacro dispatch-event (elem event)
+  `(chain ,elem (dispatch-event ,event)))

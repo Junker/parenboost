@@ -60,6 +60,9 @@
            #:query-selector
            #:query-selector-all
            #:inner-html
+           #:add-event-listener
+           #:remove-event-listener
+           #:dispatch-event
            ;; MAP
            #:make-map
            #:make-weak-map
