@@ -2,6 +2,11 @@
 
 Handy Parenscript macros.
 
+## Warning
+
+This software is still BETA quality. The APIs will be likely to change.
+
+
 ## General Macros
 
 ### `length> (val len)`
@@ -14,19 +19,19 @@ Checks if the length of `val` is less than `len`.
 Checks if the length of `val` is equal to `len`.
 
 ### `emptyp (val)`
-Checks if the object is empty.
+Checks if the `val` is empty.
 
 ### `undefinedp (val)`
-Checks if the object is `undefined`.
+Checks if the `val` is `undefined`.
 
 ### `definedp (val)`
-Checks if the object is defined.
+Checks if the `val` is defined.
 
 ### `nanp (val)`
-Checks if the object is `NaN`.
+Checks if the `val` is `NaN`.
 
 ### `finitep (val)`
-Checks if the object is finite.
+Checks if the `val` is finite.
 
 ### `make (class &rest args)`
 Creates a new instance of a class with the specified arguments.
