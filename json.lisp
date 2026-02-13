@@ -9,5 +9,5 @@
 (defpsmacro json-raw-json (str)
   `(chain *j-s-o-n (raw-j-s-o-n ,str)))
 
-(defpsmacro json-stringify (obj)
-  `(chain *j-s-o-n (stringify ,obj)))
+(defpsmacro json-stringify (val)
+  `(chain *j-s-o-n (stringify ,val)))
