@@ -54,6 +54,7 @@
            #:str-trim
            #:str-trim-end
            #:str-trim-start
+           #:str-lines
            ;; CONSOLE
            #:console-log
            #:console-debug
