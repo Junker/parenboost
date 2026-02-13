@@ -12,6 +12,9 @@
   `(= (chain ,obj length)
       ,len))
 
+(defpsmacro emptyp (obj)
+  `(= 0 (length ,obj)))
+
 (defpsmacro with-timeout ((sec) &body body)
   `(set-timeout (lambda () ,@body)
                 ,sec))
@@ -19,7 +22,6 @@
 (defpsmacro with-interval ((sec) &body body)
   `(set-interval (lambda () ,@body)
                  ,sec))
-
 
 (defpsmacro undefinedp (obj)
   `(undefined ,obj))
