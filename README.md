@@ -6,6 +6,16 @@ Handy Parenscript macros.
 
 This software is still BETA quality. The APIs will be likely to change.
 
+## Installation
+
+This system can be installed from [UltraLisp](https://ultralisp.org/) like this:
+
+```common-lisp
+(ql-dist:install-dist "http://dist.ultralisp.org/"
+                      :prompt nil)
+(ql:quickload "parenboost")
+```
+
 
 ## General Macros
 
