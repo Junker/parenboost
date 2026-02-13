@@ -4,28 +4,28 @@ Handy Parenscript macros.
 
 ## General Macros
 
-### `length> (obj len)`
-Checks if the length of `obj` is greater than `len`.
+### `length> (val len)`
+Checks if the length of `val` is greater than `len`.
 
-### `length< (obj len)`
-Checks if the length of `obj` is less than `len`.
+### `length< (val len)`
+Checks if the length of `val` is less than `len`.
 
-### `length= (obj len)`
-Checks if the length of `obj` is equal to `len`.
+### `length= (val len)`
+Checks if the length of `val` is equal to `len`.
 
-### `emptyp (obj)`
+### `emptyp (val)`
 Checks if the object is empty.
 
-### `undefinedp (obj)`
+### `undefinedp (val)`
 Checks if the object is `undefined`.
 
-### `definedp (obj)`
+### `definedp (val)`
 Checks if the object is defined.
 
-### `nanp (obj)`
+### `nanp (val)`
 Checks if the object is `NaN`.
 
-### `finitep (obj)`
+### `finitep (val)`
 Checks if the object is finite.
 
 ### `make (class &rest args)`

@@ -1,19 +1,19 @@
 (in-package :parenboost)
 
-(defpsmacro length> (obj len)
-  `(> (chain ,obj length)
+(defpsmacro length> (val len)
+  `(> (chain ,val length)
       ,len))
 
-(defpsmacro length< (obj len)
-  `(< (chain ,obj length)
+(defpsmacro length< (val len)
+  `(< (chain ,val length)
       ,len))
 
-(defpsmacro length= (obj len)
-  `(= (chain ,obj length)
+(defpsmacro length= (val len)
+  `(= (chain ,val length)
       ,len))
 
-(defpsmacro emptyp (obj)
-  `(= 0 (length ,obj)))
+(defpsmacro emptyp (val)
+  `(= 0 (length ,val)))
 
 (defpsmacro with-timeout ((sec) &body body)
   `(set-timeout (lambda () ,@body)
@@ -23,13 +23,13 @@
   `(set-interval (lambda () ,@body)
                  ,sec))
 
-(defpsmacro undefinedp (obj)
-  `(undefined ,obj))
+(defpsmacro undefinedp (val)
+  `(undefined ,val))
 
-(defpsmacro definedp (obj)
-  `(defined ,obj))
+(defpsmacro definedp (val)
+  `(defined ,val))
 
-(defpsmacro nanp (obj)
+(defpsmacro nanp (val)
   `(is-na-n ,obj))
 
 (defpsmacro finitep (obj)
