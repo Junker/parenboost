@@ -78,3 +78,6 @@
 
 (defpsmacro str-trim-start (str)
   `(chain ,str (trim-start)))
+
+(defpsmacro str-lines (str)
+  `(chain ,str (split "\\n")))
