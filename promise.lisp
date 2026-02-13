@@ -25,6 +25,6 @@
   `(chain *promise (try ,func ,@args)))
 
 (defpsmacro with-promise ((resolve &optional reject) &body body)
-  `(new* *promise
+  `(make *promise
          (lambda (,resolve ,@(when reject `(,reject)))
            ,@body)))
