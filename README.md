@@ -177,28 +177,34 @@ Creates a promise and provides `resolve` and `reject` handlers.
 
 ---
 
-## Map Macros
+## Hash Macros
 
-### `make-map ()`
-Creates a new Map.
+### `make-hash-table ()`
+Creates a new Hash (JS Map object).
 
-### `make-weak-map ()`
-Creates a new WeakMap.
+### `make-weak-hash-table ()`
+Creates a new Weak Hash (JS WeakMap object).
 
-### `map-set (map key val)`
-Sets a value in the Map.
+### `sethash (key val hash)`
+Sets a value in the hash.
 
-### `map-get (map key)`
-Gets a value from the Map.
+### `gethash (key hash)`
+Gets a value from the hash.
 
-### `map-clear (map)`
-Clears all entries in the Map.
+### `clrhash ()`
+Clears all entries in the hash.
 
-### `map-delete (map key)`
+### `remhash (key hash)`
 Deletes a specific key-value pair.
 
-### `map-has (map key)`
-Checks if a Map contains a specified key.
+### `hashash (key hash)`
+Checks if a hash contains a specified key.
+
+### `maphash (fun hash)`
+Checks if a hash contains a specified key.
+
+### `hash-table-count (hash)`
+Gets size of hash.
 
 ---
 

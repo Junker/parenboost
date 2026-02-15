@@ -1,34 +1,39 @@
 (in-package :parenboost)
 
-(defpsmacro make-map ()
+(defpsmacro make-hash-table ()
   `(make *map))
 
-(defpsmacro make-weak-map ()
+(defpsmacro make-weak-hash-table ()
   `(make *weak-map))
 
-(defpsmacro mapp (map)
-  `(instanceof ,map *map))
+(defpsmacro hash-table-p (hash)
+  `(instanceof ,hash *map))
 
-(defpsmacro map-set (map key val)
-  `(chain ,map (set ,key ,val)))
+(defpsmacro sethash (key val hash)
+  `(chain ,hash (set ,key ,val)))
 
-(defpsmacro map-get (map key)
-  `(chain ,map (get ,key)))
+(defpsmacro gethash (key hash)
+  `(chain ,hash (get ,key)))
 
-(defpsmacro map-get-or-insert (map key)
-  `(chain ,map (get-or-insert ,key)))
+(defpsmacro clrhash (hash)
+  `(chain ,hash (clear)))
 
-(defpsmacro map-clear (map)
-  `(chain ,map (clear)))
+(defpsmacro remhash (key hash)
+  `(chain ,hash (delete ,key)))
 
-(defpsmacro map-delete (map key)
-  `(chain ,map (delete ,key)))
+(defpsmacro hashash (key hash)
+  `(chain ,hash (has ,key)))
 
-(defpsmacro map-has (map key)
-  `(chain ,map (has ,key)))
+(defpsmacro hash-table-keys (hash)
+  `(chain ,hash (keys)))
 
-(defpsmacro map-keys (map)
-  `(chain ,map (keys)))
+(defpsmacro hash-table-values (hash)
+  `(chain ,hash (values)))
 
-(defpsmacro map-values (map)
-  `(chain ,map (values)))
+(defpsmacro maphash (fun hash)
+  (with-ps-gensyms (key val)
+    `(chain ,hash (for-each (lambda (,val ,key)
+                              (funcall ,fun ,key ,val))))))
+
+(defpsmacro hash-table-count (hash)
+  `(getprop ,hash 'size))
