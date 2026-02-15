@@ -185,6 +185,9 @@ Creates a new Hash (JS Map object).
 ### `make-weak-hash-table ()`
 Creates a new Weak Hash (JS WeakMap object).
 
+### `hash-table-p (hash)`
+Checks if the `hash` is Map object.
+
 ### `sethash (key val hash)`
 Sets a value in the hash.
 
